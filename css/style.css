@@ -125,7 +125,7 @@ a:hover {
 
 .slider {
     height: 100%;
-    background: url("../img/slider3.jpg") no-repeat center top;
+    background: url("../img/slider1.jpg") no-repeat center top;
     background-size: cover;
     z-index: 99;
     position: relative;
@@ -190,11 +190,13 @@ a:hover {
 }
 .slider__nav--left:hover{
     transition: .3s;
-    background: #fff url("../img/arrow-black-left.png") no-repeat center;  
+    background: #fff url("../img/arrow-black-left.png") no-repeat center;
+    box-shadow:  0 0 15px rgb(255, 238, 0);  
 }
 .slider__nav--right:hover {
     transition: .3s;
     background: #fff url("../img/arrow-black-right.png") no-repeat center; 
+    box-shadow:  0 0 15px rgb(255, 238, 0);
 }
 .slider__contain--btn {
     width: 10.625rem;
@@ -205,9 +207,16 @@ a:hover {
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 20px;
-    border: 1px solid #ffffff;
+    border: 1px solid #fff;
     background-color: #646464;
     cursor: pointer;
+    outline: none !important;    
+}
+.slider__contain--btn:hover {
+    box-shadow:  0 0 15px rgb(255, 238, 0); 
+    background-color: #fff;
+    color: #000;
+    transition: .5s;
 }
 .slider__contain--nav {
     position: absolute;
@@ -298,11 +307,13 @@ a:hover {
 }
 .mini-slider__naw--left:hover{
     transition: .3s;
-    background: #646464 url("../img/arrow-white-left.png") no-repeat center;  
+    background: #646464 url("../img/arrow-white-left.png") no-repeat center; 
+    box-shadow:  0 0 15px rgb(0, 0, 0); 
 }
 .mini-slider__naw--right:hover {
     transition: .3s;
     background: #646464 url("../img/arrow-white-right.png") no-repeat center; 
+    box-shadow:  0 0 15px rgb(0, 0, 0); 
 }
 
 /**/
@@ -343,7 +354,7 @@ a:hover {
     letter-spacing: 0.025rem;
     color: #000;
 }
-.artionticle__caption a, {
+.artionticle__caption a {
     color: #545ad8;
 }
 .artionticle__caption a:hover,
@@ -357,4 +368,10 @@ a:hover {
     font-style: italic;
 }
 
+/**/
+
+.map {
+    width: 100%;
+    height: 600px;
+}
 
