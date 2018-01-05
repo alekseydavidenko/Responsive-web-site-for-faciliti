@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test Faciliti</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">    
 </head>
 <body>
-    <div class="wrapper">
-        <header class="container header">
+    <header class="wrapper">
+        <div class="container header">
             <a href="#"><img class="header__logo" src="img/logo.svg" alt="logo"></a>
             <div class="wrapper__header">
                 <h1 class="header__description">Faciliti test</h1>
@@ -23,26 +24,85 @@
                     </ul>
                 </nav>
             </div>            
-        </header>        
-    </div>
-    <div class="slider">
-        <div class="slider__contain container">
-            <h1 class="slider__contain--logo">Full Slider</h1>
+        </div>        
+    </header>
+    <section class="slider">
+        <div class="container row slider__contain">
+            <div class="slider__contain-logo">Full Slider</div>
+            
+
             <div class="slider__wrapper">
                 <div class="slider__nav--left"></div>
                 <div class="slider__contain--description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at consectetur cumque dignissimos, dolorem doloremque dolores eaque incidunt itaque libero maiores, minima minus necessitatibus nesciunt nostrum pariatur, quidem vero vitae.</div>               
                 <div class="slider__nav--right"></div>
             </div>
             <button type="button" class="slider__contain--btn">popup</button>
-            <div class="slider__contain--nav">
-                <span class="active slider__contain--nav--item"></span>
-                <span class="slider__contain--nav--item"></span>
-                <span class="slider__contain--nav--item"></span>
-            </div>
+            
+        </div>
+        <div class="slider__contain--nav">
+            <span class="active slider__contain--nav--item"></span>
+            <span class="slider__contain--nav--item"></span>
+            <span class="slider__contain--nav--item"></span>
         </div>   
-    </div>
-    <div class="carusel">
-
-    </div>
+    </section>
+    <section class="container">
+        <h2 class="caption">Mini Slider</h2>               
+        <div class="mini-slider">
+            <div class="mini-slider__naw--left"></div>
+            <div class="container__mini">
+                <div><img class="mini-slider--item" src="img/mini-slider1.jpg" alt="slider1"></div>
+                <div><img class="mini-slider--item" src="img/mini-slider2.jpg" alt="slider2"></div>
+                <div><img class="mini-slider--item" src="img/mini-slider3.jpg" alt="slider3"></div>
+            </div>                
+            <div class="mini-slider__naw--right"></div>
+        </div>
+    </section>
+    <section class="container">
+        <h2 class="caption">Columns</h2>
+        <div class="row notes">
+            <div class="col-lg-4 notes-items">
+                <h3 class="notes-items__caption">Title lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat velit. Commodi distinctio doloribus dolorum eveniet iure modi obcaecati </p>
+            </div>
+            <div class="col-lg-4 notes-items">
+                <h3 class="notes-items__caption">Title lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat velit. Commodi distinctio doloribus dolorum eveniet iure modi obcaecati optio perferendis sed voluptatem. Aut, consectetur, ullam? Saepe.</p>
+            </div>
+            <div class="col-lg-4 notes-items">
+                <h3 class="notes-items__caption">Title lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat velit. Commodi distinctio doloribus dolorum eveniet iure modi obcaecati optio perferendis sed voluptatem. </p>
+            </div>
+        </div>
+        <div class="row notes">
+            <div class="col-lg-4 notes-items">
+                <h3 class="notes-items__caption">Title lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat velit. Commodi distinctio doloribus dolorum eveniet iure modi obcaecati optio perferendis sed voluptatem. Aut, consectetur, ullam? Saepe.</p>
+            </div>
+            <div class="col-lg-4 notes-items">
+                <h3 class="notes-items__caption">Title lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat velit.</p>
+            </div>
+            <div class="col-lg-4 notes-items">
+                <h3 class="notes-items__caption">Title lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat velit. Commodi distinctio doloribus dolorum eveniet iure modi obcaecati optio perferendis sed voluptatem. Aut, consectetur, ullam? Saepe.</p>
+            </div>
+        </div>
+    </section>
+    <section class="articles">
+        <h2 class="caption">Article</h2>
+        <article>
+            <h3 class="article__description">title h3</h3>
+            <p class="artionticle__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, dolore ea eaque explicabo natus nihil porro ullam.<br>
+            Aliquid debitis deserunt dolore ducimus earum eligendi et ex exercitationem expedita facilis fugit illo laborum nesciunt odio officia omnis perferendis possimus quod recusandae, repudiandae, sequi similique velit. <span class="artionticle__caption-bold">Amet aspernatur</span> dolorem esse, exercitationem explicabo, harum ipsum laborum laudantium minus modi nisi repellendus tempora voluptate? Ab placeat, reprehenderit! Ab aliquid aspernatur, consequatur deserunt distinctio doloribus eos, explicabo illo, molestiae <a href="#">mollitia natus nobis</a> perspiciatis quaerat quo sint tempore ullam vitae.</p>
+        </article>
+        <article>
+            <h3 class="article__description">title h3</h3>
+            <p class="artionticle__caption">Aliquam asperiores, <span class="artionticle__caption-italic">blanditiis earum ipsam maxime</span> nobis odio optio recusandae repellendus reprehenderit rerum saepe sapiente similique, totam voluptas! Autem dolores omnis quas sed! Aut beatae consequatur <span class="artionticle__caption-underline">dicta est illum incidunt</span> obcaecati officiis placeat, quidem, sapiente ullam voluptatum. Id, impedit nesciunt?<br> 
+            Atque cum cumque, dolores ducimus ea et expedita id illo incidunt, iusto nam non nostrum omnis perspiciatis quisquam repellat reprehenderit saepe sequi sint tempore ullam velit.</p>
+        </article>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
 </html>
