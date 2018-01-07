@@ -75,10 +75,11 @@ a:hover {
 }
 .header {
     height: 80px;
-    display: flex;
+    display: flex;    
+    display: -moz-box;
+    display: -ms-flexbox;
     display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
     align-items: center;
     -webkit-box-align: center;
 	-webkit-align-items: center;
@@ -86,10 +87,11 @@ a:hover {
 }
 .wrapper__header {
     width: 100%;
-    display: flex;
+    display: flex;    
+    display: -moz-box;
+    display: -ms-flexbox;
     display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
     justify-content: space-between;
     -webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
@@ -110,10 +112,11 @@ a:hover {
     font-weight: 700;
 }
 .header__menu {
-    display: flex;
+    display: flex;    
+    display: -moz-box;
+    display: -ms-flexbox;
     display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 }
 .munu__item {
     margin-left: 1.5625rem;
@@ -125,20 +128,27 @@ a:hover {
 
 .slider {
     height: 100%;
-    background: url("../img/slider1.jpg") no-repeat center top;
-    background-size: cover;
+    /* background: url("../img/slider1.jpg") no-repeat center top; */
+    /* background-size: cover; */
     z-index: 99;
-    position: relative;
     text-align: center;
-    display: flex;
+    display: flex;    
+    display: -moz-box;
+    display: -ms-flexbox;
     display: -webkit-box;
 	display: -webkit-flex;
-    display: -ms-flexbox;
     align-items: center;
     -webkit-box-align: center;
 	-webkit-align-items: center;
     -ms-flex-align: center;
     justify-content: center;
+}
+.slider-bg {
+    width: 100%;
+    height: 100%;
+    background: url("../img/slider1.jpg") no-repeat center top;
+    background-size: cover;
+    position: absolute;
 }
 .slider__contain {
     max-width: 71.875rem;
@@ -154,10 +164,11 @@ a:hover {
 }
 .slider__wrapper {
     width: 100%;
-    display: flex;
+    display: flex;    
+    display: -moz-box;
+    display: -ms-flexbox;
     display: -webkit-box;
 	display: -webkit-flex;
-    display: -ms-flexbox;
     justify-content: space-between;
     -webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
@@ -167,38 +178,38 @@ a:hover {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 }
-.slider__contain--description {
+.slider__contain-description {
     width: 25rem;
     height: 6.875;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
 }
-.slider__nav--left,
-.slider__nav--right {
+.slider__nav-prev,
+.slider__nav-next {
     width: 3.125rem;
     height: 3.125rem;
     border: 1px #fff solid;
     border-radius: 50%;
     cursor: pointer;
 }
-.slider__nav--left {
+.slider__nav-prev {
     background: url("../img/arrow-white-left.png") no-repeat center;  
 }
-.slider__nav--right {
+.slider__nav-next {
     background: url("../img/arrow-white-right.png") no-repeat center; 
 }
-.slider__nav--left:hover{
+.slider__nav-prev:hover{
     transition: .3s;
     background: #fff url("../img/arrow-black-left.png") no-repeat center;
     box-shadow:  0 0 15px rgb(255, 238, 0);  
 }
-.slider__nav--right:hover {
+.slider__nav-next:hover {
     transition: .3s;
     background: #fff url("../img/arrow-black-right.png") no-repeat center; 
     box-shadow:  0 0 15px rgb(255, 238, 0);
 }
-.slider__contain--btn {
+.slider__contain-btn {
     width: 10.625rem;
     height: 3.125rem;
     margin: 2.1875rem auto -1rem;
@@ -212,26 +223,26 @@ a:hover {
     cursor: pointer;
     outline: none !important;    
 }
-.slider__contain--btn:hover {
+.slider__contain-btn:hover {
     box-shadow:  0 0 15px rgb(255, 238, 0); 
     background-color: #fff;
     color: #000;
     transition: .5s;
 }
-.slider__contain--nav {
+.slider__contain-nav {
     position: absolute;
     bottom: 1.25rem;
     left: 0;
     right: 0;
 }
-.slider__contain--nav--item {
+.slider__contain-nav-item {
     width: 0.625rem;
     height: 0.625rem;
     background-color: #fff;
     display: inline-block;
     border-radius: 50%;
 }
-.active.slider__contain--nav--item {
+.active.slider__contain-nav-item {
     border: 1px solid #fff;
     background-color: #646464;
 }
@@ -259,58 +270,48 @@ a:hover {
     position: absolute;
 }
 .mini-slider {
-    margin: 40px 0;
-    display: flex;
+    position: relative;
+    width: 970px;
+    height: 180px;
+    margin: 40px auto 0;
+    overflow: hidden;
+}
+.mini-slider__container {
+    position: relative;   
+    display: flex;    
+    display: -moz-box;
+    display: -ms-flexbox;
     display: -webkit-box;
 	display: -webkit-flex;
-    display: -ms-flexbox;
-    justify-content: space-between;
-    justify-content: space-between;
-    -webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    align-items: center;
-    -webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 }
-.mini-slider--item {
-    max-width: 100%;
-    height: auto;
+.mini-slider-item {
+    height: 100%;
+    margin-right: 35px;
 }
-
-.container__mini {
-    width: 60.625rem;
-    display: flex;
-    display: -webkit-box;
-	display: -webkit-flex;
-    display: -ms-flexbox;
-    justify-content: space-between;
-    justify-content: space-between;
-    -webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-}
-.mini-slider__naw--left,
-.mini-slider__naw--right {
+.mini-slider__nav-prev,
+.mini-slider__nav-next {
+    position: absolute;
     width: 3.125rem;
     height: 3.125rem;
     border: 1px #646464 solid;
     border-radius: 50%;
     cursor: pointer;
+    bottom: 70px;
 }
-.mini-slider__naw--left {
-    background: url("../img/arrow-gray-left.png") no-repeat center;  
+.mini-slider__nav-prev {
+    background: url("../img/arrow-gray-left.png") no-repeat center; 
+    left: 0; 
 }
-.mini-slider__naw--right {
+.mini-slider__nav-next {
     background: url("../img/arrow-gray-right.png") no-repeat center; 
+    right: 0;
 }
-.mini-slider__naw--left:hover{
+.mini-slider__nav-prev:hover{
     transition: .3s;
     background: #646464 url("../img/arrow-white-left.png") no-repeat center; 
     box-shadow:  0 0 15px rgb(0, 0, 0); 
 }
-.mini-slider__naw--right:hover {
+.mini-slider__nav-next:hover {
     transition: .3s;
     background: #646464 url("../img/arrow-white-right.png") no-repeat center; 
     box-shadow:  0 0 15px rgb(0, 0, 0); 
