@@ -9,12 +9,14 @@
     <link href="css/style.css" rel="stylesheet">    
 </head>
 <body>
+    <!-- Header -->
     <header class="wrapper">
         <div class="container header">
+            <div class="drop-menu"></div>
             <a href="#"><img class="header__logo" src="img/logo.svg" alt="logo"></a>
             <div class="wrapper__header">
                 <h1 class="header__description">Faciliti test</h1>
-                <div>
+                <nav>
                     <ul class="header__menu">
                         <li class="munu__item"><a href="#">full slider</a></li>
                         <li class="munu__item"><a href="#">mini slider</a></li>
@@ -22,10 +24,23 @@
                         <li class="munu__item"><a href="#">artictle</a></li>
                         <li class="munu__item"><a href="#">map</a></li>
                     </ul>
-                </div>
+                </nav>                
             </div>            
-        </div>        
+        </div>              
     </header>
+    <!-- Slider -->
+    <section class="mobile-menu">
+        <nav>
+            <ul class="mobile-menu__items">
+                <li class="mobile-menu__item"><a href="#">full slider</a></li>
+                <li class="mobile-menu__item"><a href="#">mini slider</a></li>
+                <li class="mobile-menu__item"><a href="#">columns</a></li>
+                <li class="mobile-menu__item"><a href="#">artictle</a></li>
+                <li class="mobile-menu__item"><a href="#">map</a></li>
+            </ul>
+        </nav> 
+        <div class="btn-closed"></div>       
+    </section>  
     <div class="slider-bg"></div>
     <section class="slider">
         <div class="container row slider__contain">
@@ -43,7 +58,8 @@
             <span class="slider__contain-nav-item"></span>
         </div>  
     </section>
-    <section class="container">
+    <!-- Mini-slider -->
+    <section class="container mini-slider__show">
         <h2 class="caption">Mini Slider</h2>               
         <div class="mini-slider">            
             <div class="mini-slider__container">
@@ -55,6 +71,7 @@
         <div class="mini-slider__nav-prev"></div>               
         <div class="mini-slider__nav-next"></div> 
     </section>
+    <!-- Colums -->
     <section class="container">
         <h2 class="caption">Columns</h2>
         <div class="row notes">
@@ -86,6 +103,7 @@
             </div>
         </div>
     </section>
+    <!-- Article -->
     <section class="container">
         <div class="articles">
             <h2 class="caption">Article</h2>
@@ -100,7 +118,8 @@
                 Atque cum cumque, dolores ducimus ea et expedita id illo incidunt, iusto nam non nostrum omnis perspiciatis quisquam repellat reprehenderit saepe sequi sint tempore ullam velit.</p>
             </article>
         </div>
-    </section>   
+    </section> 
+    <!-- Map -->
     <section>
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d162569.89108893884!2d30.669326904347216!3d50.456846702698286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1515176448438" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
