@@ -18,16 +18,16 @@ $(document).ready(function() {
         slider.animate(
             { opacity: 0.01 }, 
             1000, 
-            () => {                
+            function() {                
                 for(let i = 0; i < nav.length; i += 1) {
                     if (nav.eq(i).hasClass('active')) {
                         nav.eq(i).removeClass('active');
                         if(i != nav.length - 1) {
-                            slider.css('background', `url('img/${list[i + 1]}')`)
+                            slider.css('background', 'url(img/' + list[i + 1] + ')');
                             nav.eq(i + 1).addClass('active');
                             break;
                         } else {
-                            slider.css('background', `url('img/${list[0]}')`)
+                            slider.css('background', 'url(img/' + list[0] + ')');
                             nav.eq(0).addClass('active');
                             break;
                         }
@@ -38,7 +38,9 @@ $(document).ready(function() {
         slider.animate(
             { opacity: 1 },
             1000, 
-            () => stop = false
+            function() {
+                stop = false;
+            }
         )        
     }
 
@@ -48,16 +50,16 @@ $(document).ready(function() {
         slider.animate(
             { opacity: 0.01 }, 
             1000, 
-            () => {               
+            function() {               
                 for(var i = 0; i < nav.length; i += 1) {
                     if (nav.eq(i).hasClass('active')) {
                         nav.eq(i).removeClass('active');
                         if(i == 0 ) {
-                            slider.css('background', `url('img/${list[2]}')`)
+                            slider.css('background', 'url(img/' + list[2] + ')');
                             nav.eq(2).addClass('active');                            
                             return;
                         } else {
-                            slider.css('background', `url('img/${list[i - 1]}')`)
+                            slider.css('background', 'url(img/' + list[i - 1] + ')');
                             nav.eq(i - 1).addClass('active');
                             return;
                         }
@@ -68,7 +70,9 @@ $(document).ready(function() {
         slider.animate(
             { opacity: 1 },
             1000, 
-            () => stop = false
+            function() {
+                stop = false;
+            } 
         )        
     }
 
@@ -93,7 +97,7 @@ $(document).ready(function() {
         $('.mini-slider__container').animate(
                 { 'margin-left': -width + -35 }, 
                 timer, 
-                () => {
+                function() {
                 $('.mini-slider__container').css('margin-left', 0);
                 $('.mini-slider-item:first-child').remove();
                 stopMove = false
@@ -110,7 +114,7 @@ $(document).ready(function() {
         $('.mini-slider__container').animate(
                 { 'margin-left': width + 35 }, 
                 timer, 
-                () => {           
+                function() {           
                 $('.mini-slider__container').css('margin-left', 0);
                 $('.mini-slider__container').css('left', 0);
                 $('.mini-slider-item:last-child').remove();
@@ -138,7 +142,7 @@ $(document).ready(function() {
         $('.mobile-menu').animate(
             { 'width': '320px' },
             500,
-            () => {
+            function() {
                 $('.mobile-menu__items').css('display', 'block');
             }
         );
@@ -161,25 +165,43 @@ $(document).ready(function() {
     var stopAnimate = true;
 
     $(window).scroll(
-        () => {
-            if (window.scrollY >= 100 && stopAnimate) {                
+       function () {
+            if (window.pageYOffset >= 100 && stopAnimate) {                
                 $('.header').animate(
                     { 'height': '4.5rem'},
                     300,
-                    () => {
+                    function() {
                         stopAnimate = false;
                     }
                 )                
             }
-            else if (window.scrollY == 0) {
+            else if (window.pageYOffset == 0) {
                 $('.header').animate(
                     { 'height': '5rem'},
                     300,
-                    () => {
+                    function() {
                         stopAnimate = true;
                     }
                 )
             }
         }
     );
+
+    // ***Popup***
+
+    $('.slider__contain-btn').click(showPopup);
+    $('.popup__btn-closed').click(hidePopup);
+    $('.popup__submit').click(function(){
+        $('.popup').css('display', 'none');
+        $("body").removeClass("fixed");
+    });    
+
+    function showPopup() {
+        $('.popup').css('display', 'block');
+        $("body").addClass("fixed");
+    }
+    function hidePopup() {
+        $('.popup').css('display', 'none');
+        $("body").removeClass("fixed");
+    }
 });
