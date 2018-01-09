@@ -182,6 +182,7 @@ a:hover {
     height: 100%;
     background: url("../img/slider1.jpg") no-repeat center top;
     background-size: cover;
+    -webkit-background-size: cover;
     position: absolute;
 }
 .slider__contain {
@@ -435,7 +436,6 @@ a:hover {
     margin: 40px 0;
     font-size: 18px;
     font-weight: 700;
-
 }
 .popup__name,
 .popup__pass {
@@ -642,4 +642,58 @@ a:hover {
     }
 
     
+}
+@media screen and (max-height: 339px) {  
+
+    /* Mobile menu */
+
+    .mobile-menu {
+        margin-top: 2.5rem;;
+    }
+
+    .mobile-menu__item {
+        margin-bottom: 10px;
+    }
+
+    /* Header Logo */
+
+    .header {
+        height: 2.5rem;
+    }
+    
+    .header__logo {
+        display: none;
+    }
+
+    /* Mobile menu */
+
+    .mobile-menu__items {
+        margin-top: 30px;
+    }
+ 
+    /* Slider */
+
+    .slider__contain {
+        height: 160px;
+    }
+    .slider__contain-logo { 
+        font-size: 1rem;
+        margin: 5px auto;     
+    }
+    .slider__contain-description {
+        font-size: 0.75rem;
+        width: 100%;
+    } 
+    
+    /* Popup */
+
+    .popup__form {
+        max-width: 320px;
+        height: 240px;
+    }
+    .popup__titel {
+        margin: 10px 0;
+        font-size: 16px;
+        font-weight: 700;
+    }
 }
